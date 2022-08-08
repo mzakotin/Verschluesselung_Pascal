@@ -1,0 +1,109 @@
+object fm_Chiffre: Tfm_Chiffre
+  Left = 615
+  Height = 527
+  Top = 93
+  Width = 629
+  Caption = 'Caesar- und Vigenère-Verschlüsselung'
+  ClientHeight = 527
+  ClientWidth = 629
+  OnCreate = FormCreate
+  LCLVersion = '1.8.4.0'
+  object bt_beenden: TButton
+    Left = 24
+    Height = 49
+    Top = 464
+    Width = 216
+    Caption = 'Programm beenden'
+    OnClick = bt_beendenClick
+    TabOrder = 0
+  end
+  object bt_einlesen: TButton
+    Left = 328
+    Height = 25
+    Top = 8
+    Width = 144
+    Caption = 'Datei einlesen'
+    OnClick = bt_einlesenClick
+    TabOrder = 1
+  end
+  object bt_speichern: TButton
+    Left = 328
+    Height = 25
+    Top = 88
+    Width = 144
+    Caption = 'Datei speichern'
+    OnClick = bt_speichernClick
+    TabOrder = 2
+  end
+  object bt_caesar: TButton
+    Left = 328
+    Height = 25
+    Top = 48
+    Width = 144
+    Caption = 'nach Caesar verschlüsseln'
+    OnClick = bt_caesarClick
+    TabOrder = 3
+  end
+  object CB_Caesar: TComboBox
+    Left = 328
+    Height = 23
+    Top = 128
+    Width = 144
+    ItemHeight = 15
+    Items.Strings = (
+      '0'
+      '1'
+      '2'
+      '3'
+      '4'
+      '5'
+      '6'
+      '7'
+      '8'
+      '9'
+      '10'
+      '11'
+      '12'
+      '13'
+      '14'
+      '15'
+      '16'
+      '17'
+      '18'
+      '19'
+      '20'
+      '21'
+      '22'
+      '23'
+      '24'
+      '25'
+    )
+    OnKeyPress = CB_CaesarKeyPress
+    TabOrder = 4
+    Text = 'CB_Caesar'
+  end
+  object Memo_Gedicht: TMemo
+    Left = 24
+    Height = 210
+    Top = 8
+    Width = 216
+    ReadOnly = True
+    TabOrder = 5
+  end
+  object Memo_Caesar: TMemo
+    Left = 24
+    Height = 216
+    Top = 232
+    Width = 216
+    ReadOnly = True
+    TabOrder = 6
+  end
+  object OD_Chiffre: TOpenDialog
+    DefaultExt = '.*.txt'
+    FileName = 'C:\Users\user\Documents\BFW\Praktikum_2020\Projekt2020_MZakotin\Verschluesselung\Gedicht_mit_Umlauten_und_Eszett.txt'
+    Filter = 'Textdateien|*.txt'
+    InitialDir = 'C:\Users\user\Documents\BFW\Praktikum_2020\Projekt2020_MZakotin\Verschluesselung\'
+    left = 264
+    top = 40
+  end
+end
